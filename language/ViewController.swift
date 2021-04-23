@@ -6,14 +6,97 @@
 //
 
 import UIKit
-
+import AVFoundation
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
+    
+   @IBOutlet weak var loveTextField: UITextField!
+   @IBOutlet weak var languageSegmentedControl: UISegmentedControl!
+   @IBOutlet weak var volumeSlider: UISlider!
+   @IBOutlet weak var pitchSlider: UISlider!
+   @IBOutlet weak var speedSlider: UISlider!
+   @IBOutlet weak var volumeSliderText: UILabel!
+   @IBOutlet weak var pitchSliderText: UILabel!
+   @IBOutlet weak var speedSliderText: UILabel!
+    
+    
+    // 滑動slider時顯示數值
+    @IBAction func voiceTypeClick(_ sender: Any) {
+        volumeSliderText.text = String(format: "%.1f", volumeSlider.value)
     }
-
-
+    @IBAction func volumeSlidereClick(_ sender: Any) {
+        pitchSliderText.text = String(format: "%.1f", pitchSlider.value)
+    }
+    @IBAction func speedRandomClick(_ sender: Any) {
+        speedSliderText.text = String(format: "%.1f", speedSlider.value)
+    }
+    
+    
+override func viewDidLoad() {
+super.viewDidLoad()
 }
+    
+    
+//點空白處收鍵盤
+override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+self.view.endEditing(true)
+}
+    
+    
+// 輸入完return收鍵盤
+func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+textField.resignFirstResponder();
+return true
+}
+    
+    
+@IBAction func buttonPressed(_ sender: Any) {
+view.endEditing(true)
+    
+let speechUtterance = AVSpeechUtterance(string: loveTextField.text!)
+let synthesizer = AVSpeechSynthesizer()
+speechUtterance.volume = volumeSlider.value
+speechUtterance.pitchMultiplier = pitchSlider.value
+speechUtterance.rate = speedSlider.value
+    
+    
+//語言
+if languageSegmentedControl.selectedSegmentIndex == 0 {
+speechUtterance.voice = AVSpeechSynthesisVoice(language: "zh-TW")
+}
+else if languageSegmentedControl.selectedSegmentIndex == 1 {
+speechUtterance.voice = AVSpeechSynthesisVoice(language: "ja-JP")
+}
+else if languageSegmentedControl.selectedSegmentIndex == 2 {
+speechUtterance.voice = AVSpeechSynthesisVoice(language: "es")
+}
+synthesizer.speak(speechUtterance)
+   
+}
+    
+    
+    // 隨機按鈕
+    @IBAction func speedRateClick(_ sender: Any) {
+        speedSlider.value = Float.random(in: 0.1...2)
+        speedSliderText.text = String(format: "%.1f", speedSlider.value)
+    }
+    
+    @IBAction func pitchRandomClick(_ sender: Any) {
+        pitchSlider.value = Float.random(in: 0.1...2)
+        pitchSliderText.text = String(format: "%.1f", pitchSlider.value)
 
+    }
+    @IBAction func speedPitchClick(_ sender: Any) {
+        speedSlider.value = Float.random(in: 0.1...2)
+        pitchSlider.value = Float.random(in: 0.1...2)
+        speedSliderText.text = String(format: "%.1f", speedSlider.value)
+        pitchSliderText.text = String(format: "%.1f", pitchSlider.value)
+
+    }
+    @IBAction func reset(_ sender: Any) {
+        speedSlider.value = Float.random(in: 0.0...0.0)
+        pitchSlider.value = Float.random(in: 0.0...0.0)
+        speedSliderText.text = String(format: "%.1f", speedSlider.value)
+        pitchSliderText.text = String(format: "%.1f", pitchSlider.value)
+    }
+}

@@ -13,6 +13,10 @@
 		A70657B0263323B60018B549 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70657AE263323B60018B549 /* Main.storyboard */; };
 		A70657B2263323B70018B549 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A70657B1263323B70018B549 /* Assets.xcassets */; };
 		A70657B5263323B70018B549 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70657B3263323B70018B549 /* LaunchScreen.storyboard */; };
+		A70657BD2633248C0018B549 /* Meows20-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70657BC2633248C0018B549 /* Meows20-Regular.ttf */; };
+		A70657BF263326440018B549 /* RiiT_F.otf in Resources */ = {isa = PBXBuildFile; fileRef = A70657BE263326440018B549 /* RiiT_F.otf */; };
+		A78BF6ED263337B800A31BC6 /* 清松手寫體2jas.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A78BF6EC263337B800A31BC6 /* 清松手寫體2jas.ttf */; };
+		A78BF6EF2633380B00A31BC6 /* KTEGAKI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A78BF6EE2633380B00A31BC6 /* KTEGAKI.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		A70657B1263323B70018B549 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A70657B4263323B70018B549 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A70657B6263323B70018B549 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A70657BC2633248C0018B549 /* Meows20-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Meows20-Regular.ttf"; sourceTree = "<group>"; };
+		A70657BE263326440018B549 /* RiiT_F.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RiiT_F.otf; sourceTree = "<group>"; };
+		A78BF6EC263337B800A31BC6 /* 清松手寫體2jas.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "清松手寫體2jas.ttf"; sourceTree = "<group>"; };
+		A78BF6EE2633380B00A31BC6 /* KTEGAKI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KTEGAKI.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,10 @@
 		A70657A7263323B60018B549 /* language */ = {
 			isa = PBXGroup;
 			children = (
+				A78BF6EE2633380B00A31BC6 /* KTEGAKI.ttf */,
+				A78BF6EC263337B800A31BC6 /* 清松手寫體2jas.ttf */,
+				A70657BC2633248C0018B549 /* Meows20-Regular.ttf */,
+				A70657BE263326440018B549 /* RiiT_F.otf */,
 				A70657A8263323B60018B549 /* AppDelegate.swift */,
 				A70657AA263323B60018B549 /* SceneDelegate.swift */,
 				A70657AC263323B60018B549 /* ViewController.swift */,
@@ -126,7 +138,11 @@
 			files = (
 				A70657B5263323B70018B549 /* LaunchScreen.storyboard in Resources */,
 				A70657B2263323B70018B549 /* Assets.xcassets in Resources */,
+				A70657BF263326440018B549 /* RiiT_F.otf in Resources */,
+				A78BF6EF2633380B00A31BC6 /* KTEGAKI.ttf in Resources */,
 				A70657B0263323B60018B549 /* Main.storyboard in Resources */,
+				A78BF6ED263337B800A31BC6 /* 清松手寫體2jas.ttf in Resources */,
+				A70657BD2633248C0018B549 /* Meows20-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
