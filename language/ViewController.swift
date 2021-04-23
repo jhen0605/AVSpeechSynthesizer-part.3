@@ -21,13 +21,13 @@ class ViewController: UIViewController {
     
     
     // 滑動slider時顯示數值
-    @IBAction func voiceTypeClick(_ sender: Any) {
+    @IBAction func volumeTypeClick(_ sender: Any) {
         volumeSliderText.text = String(format: "%.1f", volumeSlider.value)
     }
-    @IBAction func volumeSlidereClick(_ sender: Any) {
+    @IBAction func pitchTypeClick(_ sender: Any) {
         pitchSliderText.text = String(format: "%.1f", pitchSlider.value)
     }
-    @IBAction func speedRandomClick(_ sender: Any) {
+    @IBAction func speedTypeClick(_ sender: Any) {
         speedSliderText.text = String(format: "%.1f", speedSlider.value)
     }
     
@@ -75,17 +75,29 @@ synthesizer.speak(speechUtterance)
 }
     
     
-    // 隨機按鈕
-    @IBAction func speedRateClick(_ sender: Any) {
+    //隨機按鈕
+    
+    //速度
+    @IBAction func speedClick(_ sender: Any) {
         speedSlider.value = Float.random(in: 0.1...2)
         speedSliderText.text = String(format: "%.1f", speedSlider.value)
     }
     
-    @IBAction func pitchRandomClick(_ sender: Any) {
+    //音調
+    @IBAction func pitchClick(_ sender: Any) {
         pitchSlider.value = Float.random(in: 0.1...2)
         pitchSliderText.text = String(format: "%.1f", pitchSlider.value)
 
     }
+    
+    //音量
+    @IBAction func volumeClick(_ sender: Any) {
+        volumeSlider.value = Float.random(in: 0.1...2)
+        volumeSliderText.text = String(format: "%.1f", volumeSlider.value)
+
+    }
+    
+    //速度＆音調
     @IBAction func speedPitchClick(_ sender: Any) {
         speedSlider.value = Float.random(in: 0.1...2)
         pitchSlider.value = Float.random(in: 0.1...2)
@@ -93,10 +105,16 @@ synthesizer.speak(speechUtterance)
         pitchSliderText.text = String(format: "%.1f", pitchSlider.value)
 
     }
+    
+    //重置
     @IBAction func reset(_ sender: Any) {
         speedSlider.value = Float.random(in: 0.0...0.0)
         pitchSlider.value = Float.random(in: 0.0...0.0)
+        volumeSlider.value = Float.random(in: 1.0...1.0)
         speedSliderText.text = String(format: "%.1f", speedSlider.value)
         pitchSliderText.text = String(format: "%.1f", pitchSlider.value)
+        volumeSliderText.text = String(format: "%.1f", volumeSlider.value)
+
+        
     }
 }

@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18092"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,10 +27,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="111" translatesAutoresizingMaskIntoConstraints="NO" id="B46-Ig-erz">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="背景" translatesAutoresizingMaskIntoConstraints="NO" id="B46-Ig-erz">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygo-U3-r4J">
+                                <rect key="frame" x="-1" y="586" width="74" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RiiTegakiFude" family="RiiTegakiFude" pointSize="35"/>
+                                <state key="normal" title="音量">
+                                    <color key="titleColor" red="0.42745098469999998" green="0.30980393290000002" blue="0.32156863810000003" alpha="0.57168356788079466" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="volumeClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ivo-zh-RF3"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Say Something..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VOI-pZ-EBq">
                                 <rect key="frame" x="20" y="148" width="374" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -66,7 +77,7 @@
                                 <color key="minimumTrackTintColor" red="0.86666667460000002" green="0.80000001190000003" blue="0.70588237050000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="maximumTrackTintColor" red="0.65098041299999998" green="0.58039218189999997" blue="0.48627454040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
-                                    <action selector="voiceTypeClick:" destination="BYZ-38-t0r" eventType="valueChanged" id="y5J-x4-9Ak"/>
+                                    <action selector="volumeTypeClick:" destination="BYZ-38-t0r" eventType="valueChanged" id="LHn-Mh-nK2"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.10000000000000001" minValue="0.10000000000000001" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="907-Ti-m2u">
@@ -75,6 +86,7 @@
                                 <color key="minimumTrackTintColor" red="0.76470589639999997" green="0.80392158030000005" blue="0.85882353779999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="maximumTrackTintColor" red="0.51372551919999998" green="0.57254904510000004" blue="0.64313727620000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
+                                    <action selector="pitchTypeClick:" destination="BYZ-38-t0r" eventType="valueChanged" id="ehc-oj-cfZ"/>
                                     <action selector="volumeSlidereClick:" destination="BYZ-38-t0r" eventType="valueChanged" id="roc-qt-vab"/>
                                 </connections>
                             </slider>
@@ -99,6 +111,7 @@
                                 <color key="maximumTrackTintColor" red="0.51372551919999998" green="0.57254904510000004" blue="0.46666663889999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="speedRandomClick:" destination="BYZ-38-t0r" eventType="valueChanged" id="gbm-bc-Uc3"/>
+                                    <action selector="speedTypeClick:" destination="BYZ-38-t0r" eventType="valueChanged" id="ju8-NP-0ix"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YqN-az-lka">
@@ -123,7 +136,7 @@
                                     <color key="titleColor" red="0.63921570780000003" green="0.45490196350000001" blue="0.47058826679999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="speedPitchClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z9C-R9-yGn"/>
+                                    <action selector="speedPitchClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oiq-Vw-cch"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="腳印" translatesAutoresizingMaskIntoConstraints="NO" id="Lh6-Ue-MGT">
@@ -135,14 +148,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACZ-Lx-ve8">
-                                <rect key="frame" x="317" y="518" width="70" height="48"/>
+                                <rect key="frame" x="324" y="522" width="70" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="RiiTegakiFude" family="RiiTegakiFude" pointSize="35"/>
                                 <state key="normal" title="音調">
                                     <color key="titleColor" red="0.69019609689999994" green="0.69019609689999994" blue="0.71764707569999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="pitchRandomClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="292-cL-Ue9"/>
+                                    <action selector="pitchClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8bT-YQ-GAp"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="播放" translatesAutoresizingMaskIntoConstraints="NO" id="itp-9f-bw7">
@@ -163,17 +176,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hg-B4-z8g">
-                                <rect key="frame" x="28" y="518" width="70" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="RiiTegakiFude" family="RiiTegakiFude" pointSize="35"/>
-                                <state key="normal" title="速度">
-                                    <color key="titleColor" red="0.67058825489999996" green="0.72941178080000002" blue="0.67058825489999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <action selector="speedRateClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VIO-oG-TB9"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="隨機" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fbu-qb-WIn">
                                 <rect key="frame" x="166" y="516" width="100" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -182,15 +184,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qvc-OC-YFJ">
-                                <rect key="frame" x="327" y="444" width="60" height="42"/>
+                                <rect key="frame" x="341" y="585" width="74" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="RiiTegakiFude" family="RiiTegakiFude" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="RiiTegakiFude" family="RiiTegakiFude" pointSize="35"/>
                                 <state key="normal" title="重置">
                                     <color key="titleColor" red="0.90588235859999999" green="0.81176471709999998" blue="0.8156862855" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="pitchRandomClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZIs-ye-0O9"/>
-                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KJQ-H9-QVP"/>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4cE-0g-9vq"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I want to say..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGD-U2-BSF">
@@ -200,6 +201,17 @@
                                 <color key="textColor" red="0.42745098469999998" green="0.30980393290000002" blue="0.32549020649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hg-B4-z8g">
+                                <rect key="frame" x="28" y="522" width="70" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RiiTegakiFude" family="RiiTegakiFude" pointSize="35"/>
+                                <state key="normal" title="速度">
+                                    <color key="titleColor" red="0.67058825489999996" green="0.72941178080000002" blue="0.67058825489999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="speedClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gsV-QK-1pB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -221,8 +233,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="111" width="289" height="405"/>
         <image name="播放" width="320" height="320"/>
+        <image name="背景" width="289" height="405"/>
         <image name="腳印" width="895" height="57"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
