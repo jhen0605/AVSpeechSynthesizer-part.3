@@ -11,10 +11,10 @@
 		A70657AB263323B60018B549 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70657AA263323B60018B549 /* SceneDelegate.swift */; };
 		A70657AD263323B60018B549 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70657AC263323B60018B549 /* ViewController.swift */; };
 		A70657B0263323B60018B549 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70657AE263323B60018B549 /* Main.storyboard */; };
-		A70657B2263323B70018B549 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A70657B1263323B70018B549 /* Assets.xcassets */; };
 		A70657B5263323B70018B549 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70657B3263323B70018B549 /* LaunchScreen.storyboard */; };
 		A70657BD2633248C0018B549 /* Meows20-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70657BC2633248C0018B549 /* Meows20-Regular.ttf */; };
 		A70657BF263326440018B549 /* RiiT_F.otf in Resources */ = {isa = PBXBuildFile; fileRef = A70657BE263326440018B549 /* RiiT_F.otf */; };
+		A74138732633573300ADE1A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A74138722633573300ADE1A7 /* Assets.xcassets */; };
 		A78BF6ED263337B800A31BC6 /* 清松手寫體2jas.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A78BF6EC263337B800A31BC6 /* 清松手寫體2jas.ttf */; };
 		A78BF6EF2633380B00A31BC6 /* KTEGAKI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A78BF6EE2633380B00A31BC6 /* KTEGAKI.ttf */; };
 /* End PBXBuildFile section */
@@ -25,11 +25,11 @@
 		A70657AA263323B60018B549 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A70657AC263323B60018B549 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A70657AF263323B60018B549 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A70657B1263323B70018B549 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A70657B4263323B70018B549 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A70657B6263323B70018B549 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A70657BC2633248C0018B549 /* Meows20-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Meows20-Regular.ttf"; sourceTree = "<group>"; };
 		A70657BE263326440018B549 /* RiiT_F.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RiiT_F.otf; sourceTree = "<group>"; };
+		A74138722633573300ADE1A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		A78BF6EC263337B800A31BC6 /* 清松手寫體2jas.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "清松手寫體2jas.ttf"; sourceTree = "<group>"; };
 		A78BF6EE2633380B00A31BC6 /* KTEGAKI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KTEGAKI.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,7 +72,7 @@
 				A70657AA263323B60018B549 /* SceneDelegate.swift */,
 				A70657AC263323B60018B549 /* ViewController.swift */,
 				A70657AE263323B60018B549 /* Main.storyboard */,
-				A70657B1263323B70018B549 /* Assets.xcassets */,
+				A74138722633573300ADE1A7 /* Assets.xcassets */,
 				A70657B3263323B70018B549 /* LaunchScreen.storyboard */,
 				A70657B6263323B70018B549 /* Info.plist */,
 			);
@@ -137,11 +137,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A70657B5263323B70018B549 /* LaunchScreen.storyboard in Resources */,
-				A70657B2263323B70018B549 /* Assets.xcassets in Resources */,
 				A70657BF263326440018B549 /* RiiT_F.otf in Resources */,
 				A78BF6EF2633380B00A31BC6 /* KTEGAKI.ttf in Resources */,
 				A70657B0263323B60018B549 /* Main.storyboard in Resources */,
 				A78BF6ED263337B800A31BC6 /* 清松手寫體2jas.ttf in Resources */,
+				A74138732633573300ADE1A7 /* Assets.xcassets in Resources */,
 				A70657BD2633248C0018B549 /* Meows20-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,7 +232,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -287,7 +287,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -305,6 +305,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WA34G25776;
 				INFOPLIST_FILE = language/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -324,6 +325,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WA34G25776;
 				INFOPLIST_FILE = language/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -33,6 +33,8 @@ class ViewController: UIViewController {
     
     
 override func viewDidLoad() {
+    
+    //更改slider圖片
     super.viewDidLoad()
     volumeSlider.setThumbImage(UIImage(named: "貓掌"), for: .normal)
     pitchSlider.setThumbImage(UIImage(named: "貓掌"), for: .normal)
