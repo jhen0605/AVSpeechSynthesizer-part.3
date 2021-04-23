@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18092"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,7 +27,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="背景" translatesAutoresizingMaskIntoConstraints="NO" id="B46-Ig-erz">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pngtree-watercolor-simple-clean-background-image_525989" translatesAutoresizingMaskIntoConstraints="NO" id="B46-Ig-erz">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -77,7 +77,7 @@
                                 <color key="minimumTrackTintColor" red="0.86666667460000002" green="0.80000001190000003" blue="0.70588237050000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="maximumTrackTintColor" red="0.65098041299999998" green="0.58039218189999997" blue="0.48627454040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
-                                    <action selector="volumeTypeClick:" destination="BYZ-38-t0r" eventType="valueChanged" id="LHn-Mh-nK2"/>
+                                    <action selector="volumeTypeClick:" destination="BYZ-38-t0r" eventType="valueChanged" id="JSM-7h-jfb"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.10000000000000001" minValue="0.10000000000000001" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="907-Ti-m2u">
@@ -86,8 +86,7 @@
                                 <color key="minimumTrackTintColor" red="0.76470589639999997" green="0.80392158030000005" blue="0.85882353779999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="maximumTrackTintColor" red="0.51372551919999998" green="0.57254904510000004" blue="0.64313727620000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
-                                    <action selector="pitchTypeClick:" destination="BYZ-38-t0r" eventType="valueChanged" id="ehc-oj-cfZ"/>
-                                    <action selector="volumeSlidereClick:" destination="BYZ-38-t0r" eventType="valueChanged" id="roc-qt-vab"/>
+                                    <action selector="pitchTypeClick:" destination="BYZ-38-t0r" eventType="valueChanged" id="qqG-2v-0cc"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVV-wR-XdH">
@@ -110,8 +109,7 @@
                                 <color key="minimumTrackTintColor" red="0.89411771299999998" green="0.90196073060000004" blue="0.89019608500000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="maximumTrackTintColor" red="0.51372551919999998" green="0.57254904510000004" blue="0.46666663889999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
-                                    <action selector="speedRandomClick:" destination="BYZ-38-t0r" eventType="valueChanged" id="gbm-bc-Uc3"/>
-                                    <action selector="speedTypeClick:" destination="BYZ-38-t0r" eventType="valueChanged" id="ju8-NP-0ix"/>
+                                    <action selector="speedTypeClick:" destination="BYZ-38-t0r" eventType="valueChanged" id="mgU-np-YSL"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YqN-az-lka">
@@ -219,11 +217,11 @@
                     <connections>
                         <outlet property="languageSegmentedControl" destination="hzN-wP-aY6" id="mFJ-Ab-8cs"/>
                         <outlet property="loveTextField" destination="VOI-pZ-EBq" id="3DN-Db-Pnl"/>
-                        <outlet property="pitchSlider" destination="907-Ti-m2u" id="4Ur-ch-Dpl"/>
+                        <outlet property="pitchSlider" destination="907-Ti-m2u" id="NPT-pe-KvL"/>
                         <outlet property="pitchSliderText" destination="kVV-wR-XdH" id="mLw-HL-imN"/>
                         <outlet property="speedSlider" destination="YuY-r0-LJc" id="JtI-Gv-eWm"/>
                         <outlet property="speedSliderText" destination="YqN-az-lka" id="c7Z-k3-sVg"/>
-                        <outlet property="volumeSlider" destination="E0j-4p-Qwa" id="GRS-kX-zw8"/>
+                        <outlet property="volumeSlider" destination="E0j-4p-Qwa" id="WNB-at-q2Z"/>
                         <outlet property="volumeSliderText" destination="QpN-k2-sD2" id="cL0-88-jCn"/>
                     </connections>
                 </viewController>
@@ -233,8 +231,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="pngtree-watercolor-simple-clean-background-image_525989" width="289" height="405"/>
         <image name="播放" width="320" height="320"/>
-        <image name="背景" width="289" height="405"/>
         <image name="腳印" width="895" height="57"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

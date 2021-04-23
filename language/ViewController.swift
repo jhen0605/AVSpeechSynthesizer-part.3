@@ -33,7 +33,11 @@ class ViewController: UIViewController {
     
     
 override func viewDidLoad() {
-super.viewDidLoad()
+    super.viewDidLoad()
+    volumeSlider.setThumbImage(UIImage(named: "貓掌"), for: .normal)
+    pitchSlider.setThumbImage(UIImage(named: "貓掌"), for: .normal)
+    speedSlider.setThumbImage(UIImage(named: "貓掌"), for: .normal)
+    
 }
     
     
